@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.list-container {
+  background-color: black;
+  padding: 1% 3%;
+}
+
+.followers {
+  color: whitesmoke;
+  background-color: blueviolet;
+  margin: 4% 0;
+}
+
+.followers img {
+  width: 60%;
+  margin: 5% 0;
+  border-radius: 500px;
 }

@@ -7,12 +7,9 @@ const ListContainer = props => {
 
 
     return(
-        <div>
+        <div className="list-container">
             <h3>Followers:</h3>
-            {props.followers.map(element => 
-                <h4>{element.login}</h4>
-            )}
-            <Card />
+            <Card followers={props.followers}/>
         </div>
     )
 }

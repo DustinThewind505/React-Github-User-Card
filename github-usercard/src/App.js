@@ -7,6 +7,7 @@ class App extends React.Component {
 
   state = {
     userName: "",
+    avatarUrl: "",
     followers: [],
   }
 
@@ -15,7 +16,8 @@ class App extends React.Component {
       .then(res => res.json())
       .then(response => {
         this.setState({
-          userName: response.login
+          userName: response.login,
+          avatarUrl: response.avatar_url
         })
       })
       .catch(err => console.error(err))
@@ -38,6 +40,7 @@ class App extends React.Component {
         <header className="App-header">
           <div>
           <h1>User: {this.state.userName}</h1>
+          <img className="App-logo" src={this.state.avatarUrl} />
             <ListContainer followers={this.state.followers} />
           </div>
         </header>
